@@ -8,7 +8,7 @@ while notFound:
     playerTwoGuess = raw_input("Player2, please input your guess")
     playerTwoGuess = int(playerTwoGuess)
     if playerTwoGuess == playerOneNum:
-        print("You are right after trying for %d times. Program ends.", count)
+        print "You are right after trying for", count, "times. Program ends."
         notFound = False
     elif playerTwoGuess > playerOneNum:
         print("Your guess is too high")
