@@ -1,4 +1,5 @@
 # 2.5.6
+#this problem is completed!
 while True:
     try:
         number1 = int(raw_input('Enter First number : '))
@@ -6,7 +7,8 @@ while True:
         print("Your input is not a number")
         continue
     else:
-        break
+      break
+while True:   
     try:
         number2 = int(raw_input('Enter Second number : '))
     except ValueError:
@@ -14,6 +16,7 @@ while True:
         continue
     else:
         break
+while True:
     try:
         number3 = int(raw_input('Enter Third number : '))
     except ValueError:
@@ -21,6 +24,7 @@ while True:
         continue
     else: 
         break
+while True:
     try:
         number4 = int(raw_input('Enter Fourth number: '))
     except ValueError:
@@ -38,4 +42,6 @@ def smallest(num1, num2, num3, num4):
     else:
       		smallest_num = num4
     print('The smallest of the numbers is : ', smallest_num)
+    
 smallest(number1, number2, number3, number4)
+print('Program ends.')
