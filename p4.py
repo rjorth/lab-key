@@ -1,26 +1,16 @@
-import getpass
-getpass.getpass("Player1, please enter your number")
+playerOneNum = raw_input("Player 1, please write down your number secretly")
+playerOneNum = int(playerOneNum)
+notFound = True
+count = 0
 
-
-for i in range(0,20):
-    player2 = raw_input("Player2, please input your guess")
-    if player2 !== getpass:
-        print("Try again")
-        continue
-    else: 
-        print("You are right") 
-# alternative attempt
-import getpass
-player1 = getpass.getpass('Player1, please enter your number: ')
-
-for player2 in range(0,5):
-    player2 = raw_input('Player 2, please input your guess')
-    if player2 == player1:
-        print('You are correct!')
-        break
-    elif player2 != player1 :
-        print('You are not correct.')
-        continue
+while notFound:
+    count += 1
+    playerTwoGuess = raw_input("Player2, please input your guess")
+    playerTwoGuess = int(playerTwoGuess)
+    if playerTwoGuess == playerOneNum:
+        print "You are right after trying for", count, "times. Program ends."
+        notFound = False
+    elif playerTwoGuess > playerOneNum:
+        print("Your guess is too high")
     else:
-        print('You are correct after 5 guesses.')
-        break
+        print("Your guess is too low")
