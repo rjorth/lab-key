@@ -1,19 +1,20 @@
-def new_gpa(points, credits):
-    total_points = 0
-    total_credits = 0
-    new_entry = []
-    cont = True
+notDone = True
+points = 0
+credits = 0
 
-    while(cont):
-        new_entry = raw_input("Please enter your points and credits ")
-        
-        points = new_entry[0]
-        credits = new_entry[1]
-        total_points += points
-        totalCredits += credits
-        if (new_entry = -1):
-            cont = False
-            
-        gpa = total_points / total_credits
-        print('Your gpa is: ' +str(gpa))
-print('Program ends')
+while notDone:
+    gpa = raw_input("Input GPA and Credits:")
+    try:
+        val = int(gpa)
+        if int(gpa) == -1:
+            print("Program ends.")
+            notDone = False
+    except ValueError:
+        gpa = str(gpa)
+        gpa = gpa.split()
+        point = float(gpa[0])
+        credit = float(gpa[1])
+        points += (point * credit)
+        credits += credit
+        GPA = (points/credits)
+        print "Current GPA: ", GPA
